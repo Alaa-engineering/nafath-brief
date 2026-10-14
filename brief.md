@@ -44,4 +44,8 @@ Resource: The Minimum Elements for a Software Bill of Materials (SBOM) - https:/
 
 ## Misconception in My Track
 
+It's a common misperception that if the repository is private, hardcoding secrets in source code is acceptable. However, credentials can be exposed by code sharing, future publications, or unintentional access to secret repositories. Deleting secrets from previous iterations in subsequent commits does not remove them. According to the Twelve-Factor App “Store config in the environment” section, developers should separate configuration from code and inject credentials at runtime using environment variables or centralised secrets-management tools. Appropriate access limits and least-privilege permissions are essential since repository privacy cannot guarantee credential security on its own.
+
 ## Open Question
+
+How can development teams securely manage and rotate application secrets across development, testing, and production environments without exposing credentials or disrupting services?
